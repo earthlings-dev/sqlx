@@ -105,11 +105,13 @@ fn bench_pool_with(b: &mut Bencher, input: &Input, database_url: &str) {
     }
 
     b.to_async(&runtime).iter(|| {
-        async { pool.acquire().await.expect("failed to acquire connection") }
-            .instrument(tracing::info_span!("iter"))
+        async {
+            if let Err(e) = pool.acquire().await {
+                panic!("failed to acquire connection: {e:?}");
+            }
+        }
+        .instrument(tracing::info_span!("iter"))
     });
-
-    drop(pool.close());
 
     drop(pool.close());
 }
