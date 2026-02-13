@@ -7,7 +7,7 @@ use tower::ServiceExt;
 
 use std::borrow::BorrowMut;
 
-use common::{expect_rfc3339_timestamp, expect_uuid, response_json, RequestBuilderExt};
+use common::{RequestBuilderExt, expect_rfc3339_timestamp, expect_uuid, response_json};
 
 use serde_json::json;
 

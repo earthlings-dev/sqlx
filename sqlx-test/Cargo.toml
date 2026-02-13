@@ -6,7 +6,7 @@ publish = false
 rust-version.workspace = true
 
 [dependencies]
-sqlx = { default-features = false, path = ".." }
+sqlx = { workspace = true }
 env_logger = { workspace = true }
 dotenvy = { workspace = true }
 anyhow = { workspace = true }

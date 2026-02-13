@@ -3,10 +3,10 @@
 
 use axum::body::{Body, BoxBody, HttpBody};
 use axum::http::header::CONTENT_TYPE;
-use axum::http::{request, Request};
+use axum::http::{Request, request};
 use axum::response::Response;
-use time::format_description::well_known::Rfc3339;
 use time::OffsetDateTime;
+use time::format_description::well_known::Rfc3339;
 use uuid::Uuid;
 
 pub trait RequestBuilderExt {

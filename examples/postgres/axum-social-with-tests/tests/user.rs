@@ -7,7 +7,7 @@ use tower::ServiceExt;
 
 use std::borrow::BorrowMut;
 
-use common::{response_json, RequestBuilderExt};
+use common::{RequestBuilderExt, response_json};
 
 use serde_json::json;
 

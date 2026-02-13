@@ -1,4 +1,4 @@
-use argon2::{password_hash, Argon2, PasswordHasher, PasswordVerifier};
+use argon2::{Argon2, PasswordHasher, PasswordVerifier, password_hash};
 use password_hash::PasswordHashString;
 use password_hash::rand_core::OsRng;
 use rand::distr::{Alphanumeric, DistString};

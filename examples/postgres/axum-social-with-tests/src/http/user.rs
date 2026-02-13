@@ -1,5 +1,5 @@
 use axum::http::StatusCode;
-use axum::{routing::post, Extension, Json, Router};
+use axum::{Extension, Json, Router, routing::post};
 use rand::RngExt;
 use regex::Regex;
 use std::{sync::LazyLock, time::Duration};

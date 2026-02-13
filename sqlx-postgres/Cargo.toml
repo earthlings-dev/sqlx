@@ -81,6 +81,7 @@ features = ["json"]
 [dev-dependencies.sqlx]
 # FIXME: https://github.com/rust-lang/cargo/issues/15622
 # workspace = true
+version = "=0.9.0-alpha.1"
 path = ".."
 features = ["postgres", "derive"]
 

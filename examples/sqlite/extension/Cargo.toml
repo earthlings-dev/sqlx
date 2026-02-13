@@ -1,4 +1,5 @@
 [package]
+rust-version = "1.93"
 name = "sqlx-example-sqlite-extension"
 version = "0.1.0"
 license.workspace = true
@@ -9,7 +10,7 @@ categories.workspace = true
 authors.workspace = true
 
 [dependencies]
-sqlx = { path = "../../../", features = [ "sqlite", "runtime-tokio", "tls-native-tls", "sqlx-toml"] }
+sqlx = { workspace = true, features = [ "sqlite", "runtime-tokio", "tls-native-tls", "sqlx-toml"] }
 tokio = { version = "1.49.0", features = ["rt", "macros"]}
 anyhow = "1.0"
 

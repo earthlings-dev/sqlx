@@ -335,12 +335,12 @@ impl StatementHandle {
 
     #[inline]
     pub(crate) fn column_int(&self, index: usize) -> i32 {
-        unsafe { sqlite3_column_int(self.0.as_ptr(), check_col_idx!(index)) as i32 }
+        unsafe { sqlite3_column_int(self.0.as_ptr(), check_col_idx!(index)) }
     }
 
     #[inline]
     pub(crate) fn column_int64(&self, index: usize) -> i64 {
-        unsafe { sqlite3_column_int64(self.0.as_ptr(), check_col_idx!(index)) as i64 }
+        unsafe { sqlite3_column_int64(self.0.as_ptr(), check_col_idx!(index)) }
     }
 
     #[inline]
