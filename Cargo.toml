@@ -524,11 +524,11 @@ criterion = { workspace = true }
 libsqlite3-sys = { version = "0.36.0" }
 
 [patch.crates-io]
-rand = { git = "https://github.com/earthlings-dev/rand.git" }
-rand_core = { git = "https://github.com/earthlings-dev/rand_core.git" }
-rand_chacha = { git = "https://github.com/earthlings-dev/rngs.git" }
-crypto-primes = { git = "https://github.com/earthlings-dev/crypto-primes.git" }
-rsa = { git = "https://github.com/earthlings-dev/rsa.git" }
+rand = { path = "../rand" }
+rand_core = { path = "../rand_core" }
+rand_chacha = { path = "../rngs/rand_chacha" }
+crypto-primes = { path = "../crypto-primes" }
+rsa = { path = "../RSA" }
 
 # If this is an unconditional dev-dependency then Cargo will *always* try to build `libsqlite3-sys`,
 # even when SQLite isn't the intended test target, and fail if the build environment is not set up for compiling C code.
